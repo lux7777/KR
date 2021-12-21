@@ -1,27 +1,27 @@
-// count blanks, tabs and newlines //
+// count blanks, tabs and newlines 
 
 #include <stdio.h>
 
 int main(int argc, char const *argv[])
 {
-    int c, b, t, n;
+    int c, blanks, tabs, nlines;
 
-    b = 0;
-    t = 0;
-    n = 0;
+    blanks = 0;
+    tabs = 0;
+    nlines = 0;
 
     while ((c = getchar()) != EOF){
         if (c == ' '){
-            ++b;
+            ++blanks;
         }
-        if (c == '\t'){
-            ++t;
+        else if (c == '\t'){
+            ++tabs;
         }
-        if (c == '\n'){
-            ++n;
+        else if (c == '\n'){
+            ++nlines;
         }        
     }
-    printf("blanks = %d\ntabs = %d\nnew lines = %d\n", b, t, n);
+    printf("blanks = %d\ntabs = %d\nnew lines = %d\n", blanks, tabs, nlines);
 
     return 0;
 }
