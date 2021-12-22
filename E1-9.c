@@ -4,16 +4,16 @@
 
 int main(int argc, char const *argv[])
 {
-    int c, numb;  // numb = number of blanks
+    int c, nblanks;  // nblanks = number of blanks
 
-    numb = 0;
+    nblanks = 0;
     while ((c = getchar()) != EOF){
         if (c == ' '){
-            ++numb;
+            ++nblanks;
         } else if (c != ' '){
-            if (numb >= 1){
+            if (nblanks > 0){
                 putchar(' ');
-                numb = 0;
+                nblanks = 0;
             }
             putchar(c);            
         }
