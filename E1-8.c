@@ -13,15 +13,16 @@ int main(int argc, char const *argv[])
     while ((c = getchar()) != EOF){
         if (c == ' '){
             ++blanks;
-        }
-        else if (c == '\t'){
+        } else if (c == '\t'){
             ++tabs;
-        }
-        else if (c == '\n'){
+        } else if (c == '\n'){
             ++nlines;
         }        
     }
-    printf("blanks = %d\ntabs = %d\nnew lines = %d\n", blanks, tabs, nlines);
+    
+    printf("blanks = %d\n", blanks);
+    printf("tabs = %d\n", tabs);
+    printf("new lines = %d\n", nlines);
 
     return 0;
 }
